@@ -1,0 +1,53 @@
+
+
+# Start pyc-objdump output
+
+.set versionpyvm	 62211
+.set flags		 0x00000040
+.set filename		 "4.py"
+.set name		 "<module>"
+.set stack_size		 2
+.set arg_count		 0
+
+.interned
+	"a"
+	"b"
+	"<module>"
+
+.consts
+	1
+	2
+	None
+
+.names
+	"a"
+	"b"
+
+.text
+.line 1
+	LOAD_CONST            0	# 1
+	STORE_NAME            0	# "a"
+.line 2
+	LOAD_CONST            1	# 2
+	STORE_NAME            1	# "b"
+.line 3
+	LOAD_NAME             0	# "a"
+	LOAD_NAME             1	# "b"
+	COMPARE_OP            4	# ">"
+	POP_JUMP_IF_FALSE     label_0
+.line 4
+	LOAD_NAME             0	# "a"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_FORWARD          label_1
+.line 6
+label_0:
+	LOAD_NAME             1	# "b"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+label_1:
+	LOAD_CONST            2	# None
+	RETURN_VALUE          
+
+# Disassembled Mon Oct 16 15:33:12 2023
+

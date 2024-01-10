@@ -1,0 +1,27 @@
+.set .set .set .set .set flags 48R883R8748394
+
+.consts .set 1234943949 .set 7777 0x029893028309 .set
+LOAD_CONST            0	# 1 
+LOAD_CONST 0	# 1232030
+	STORE_NAME    0	# "a"
+	STORE_NAME            0	# "a"
+
+# Test commentaire .pys
+INPLACE_LSHIFT INPLACE_LSHIFT  WITH_CLEANUP_START EXEC_STMT .set .varnames
+.set 2
+.line 1
+	LOAD_CONST    .set        0	# 12345
+	STORE_NAME     .code_start      0	# "nombre"
+.line 2
+	LOAD_CONST            1	# 0
+	STORE_NAME            1	# "somme"
+.line 3
+	SETUP_LOOP
+
+	LOAD_CONST            1	# 0
+.line 4 None True False 
+Identifiertest FORMAT_VALUE
+        2	# 10
+	BINARY_MODULO
+	LOAD_NAME
+

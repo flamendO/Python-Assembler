@@ -1,0 +1,71 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "13.py"
+.set name		 "<module>"
+.set stack_size		 4
+.set arg_count		 0
+
+.interned
+	"pomme"
+	"banane"
+	"orange"
+	"raisin"
+	"kiwi"
+	"fruits"
+	"fruit_recherche"
+	"<module>"
+
+.consts
+	"pomme"
+	"banane"
+	"orange"
+	"raisin"
+	"kiwi"
+	"est dans la liste des fruits."
+	"n'est pas dans la liste des fruits."
+	None
+
+.names
+	"fruits"
+	"fruit_recherche"
+
+.text
+.line 1
+	LOAD_CONST            0	# "pomme"
+	LOAD_CONST            1	# "banane"
+	LOAD_CONST            2	# "orange"
+	LOAD_CONST            3	# "raisin"
+	BUILD_LIST            4
+	STORE_NAME            0	# "fruits"
+.line 2
+	LOAD_CONST            4	# "kiwi"
+	STORE_NAME            1	# "fruit_recherche"
+.line 3
+	LOAD_NAME             1	# "fruit_recherche"
+	LOAD_NAME             0	# "fruits"
+	COMPARE_OP            6	# "Unknown operator"
+	POP_JUMP_IF_FALSE     label_0
+.line 4
+	LOAD_NAME             1	# "fruit_recherche"
+	LOAD_CONST            5	# "est dans la liste des fruits."
+	BUILD_TUPLE           2
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_FORWARD          label_1
+.line 6
+label_0:
+	LOAD_NAME             1	# "fruit_recherche"
+	LOAD_CONST            6	# "n'est pas dans la liste des fruits."
+	BUILD_TUPLE           2
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+label_1:
+	LOAD_CONST            7	# None
+	RETURN_VALUE          
+
+# Disassembled Sun Oct 22 23:13:59 2023
+

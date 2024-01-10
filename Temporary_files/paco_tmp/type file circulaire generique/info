@@ -1,0 +1,11 @@
+
+
+/* INFORMATIONS  */
+
+
+queue.c doit se trouver dans le fichier src/
+queue.h doit se trouver dans le fichier include/pyas/
+test-queue.c doit se trouver dans le fichier tests/
+
+
+

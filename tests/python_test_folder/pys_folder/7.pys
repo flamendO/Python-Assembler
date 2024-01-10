@@ -1,0 +1,66 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "7.py"
+.set name		 "<module>"
+.set stack_size		 2
+.set arg_count		 0
+
+.interned
+	"Oui"
+	"Non"
+	"a"
+	"b"
+	"c"
+	"<module>"
+
+.consts
+	5
+	9
+	69
+	"Oui"
+	"Non"
+	None
+
+.names
+	"a"
+	"b"
+	"c"
+
+.text
+.line 1
+	LOAD_CONST            0	# 5
+	STORE_NAME            0	# "a"
+.line 2
+	LOAD_CONST            1	# 9
+	STORE_NAME            1	# "b"
+.line 3
+	LOAD_CONST            2	# 69
+	STORE_NAME            2	# "c"
+.line 5
+	LOAD_NAME             0	# "a"
+	LOAD_NAME             1	# "b"
+	COMPARE_OP            4	# ">"
+	POP_JUMP_IF_FALSE     label_0
+	LOAD_NAME             0	# "a"
+	LOAD_NAME             2	# "c"
+	COMPARE_OP            0	# "<"
+	POP_JUMP_IF_FALSE     label_0
+.line 6
+	LOAD_CONST            3	# "Oui"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_FORWARD          label_0
+.line 7
+label_0:
+	LOAD_CONST            4	# "Non"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	LOAD_CONST            5	# None
+	RETURN_VALUE          
+
+# Disassembled Sun Oct 22 15:43:52 2023
+

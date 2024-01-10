@@ -1,0 +1,151 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "15.py"
+.set name		 "<module>"
+.set stack_size		 2
+.set arg_count		 0
+
+.interned
+	"False"
+	"range"
+	"True"
+	"n"
+	"i"
+	"est_premier"
+	"nombres_premiers"
+	"len"
+	"append"
+	"<module>"
+
+.consts
+.code_start 1
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "15.py"
+.set name		 "est_premier"
+.set stack_size		 3
+.set arg_count		 1
+
+.consts
+	None
+	1
+	2
+	0
+
+.names
+	"False"
+	"range"
+	"True"
+
+.varnames
+	"n"
+	"i"
+
+.text
+.line 2
+	LOAD_FAST             0	# "n"
+	LOAD_CONST            1	# 1
+	COMPARE_OP            1	# "<="
+	POP_JUMP_IF_FALSE     label_0
+.line 3
+	LOAD_GLOBAL           0
+	RETURN_VALUE          
+.line 4
+label_0:
+	SETUP_LOOP            label_3
+	LOAD_GLOBAL           1
+	LOAD_CONST            2	# 2
+	LOAD_FAST             0	# "n"
+	CALL_FUNCTION         2
+	GET_ITER              
+label_1:
+	FOR_ITER              label_2
+	STORE_FAST            1	# "i"
+.line 5
+	LOAD_FAST             0	# "n"
+	LOAD_FAST             1	# "i"
+	BINARY_MODULO         
+	LOAD_CONST            3	# 0
+	COMPARE_OP            2	# "=="
+	POP_JUMP_IF_FALSE     label_1
+.line 6
+	LOAD_GLOBAL           0
+	RETURN_VALUE          
+	JUMP_ABSOLUTE         label_1
+label_2:
+	POP_BLOCK             
+.line 7
+label_3:
+	LOAD_GLOBAL           2
+	RETURN_VALUE          
+.code_end
+	2
+	10
+	1
+	"Les 10 premiers nombres premiers sont"
+	None
+
+.names
+	"est_premier"
+	"nombres_premiers"
+	"n"
+	"len"
+	"append"
+
+.text
+.line 1
+	LOAD_CONST            0	# <code:"est_premier">
+	MAKE_FUNCTION         0
+	STORE_NAME            0	# "est_premier"
+.line 9
+	BUILD_LIST            0
+	STORE_NAME            1	# "nombres_premiers"
+.line 10
+	LOAD_CONST            1	# 2
+	STORE_NAME            2	# "n"
+.line 11
+	SETUP_LOOP            label_3
+label_0:
+	LOAD_NAME             3	# "len"
+	LOAD_NAME             1	# "nombres_premiers"
+	CALL_FUNCTION         1
+	LOAD_CONST            2	# 10
+	COMPARE_OP            0	# "<"
+	POP_JUMP_IF_FALSE     label_2
+.line 12
+	LOAD_NAME             0	# "est_premier"
+	LOAD_NAME             2	# "n"
+	CALL_FUNCTION         1
+	POP_JUMP_IF_FALSE     label_1
+.line 13
+	LOAD_NAME             1	# "nombres_premiers"
+	LOAD_ATTR             4
+	LOAD_NAME             2	# "n"
+	CALL_FUNCTION         1
+	POP_TOP               
+	JUMP_FORWARD          label_1
+.line 14
+label_1:
+	LOAD_NAME             2	# "n"
+	LOAD_CONST            3	# 1
+	INPLACE_ADD           
+	STORE_NAME            2	# "n"
+	JUMP_ABSOLUTE         label_0
+label_2:
+	POP_BLOCK             
+.line 16
+label_3:
+	LOAD_CONST            4	# "Les 10 premiers nombres premiers sont"
+	LOAD_NAME             1	# "nombres_premiers"
+	BUILD_TUPLE           2
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	LOAD_CONST            5	# None
+	RETURN_VALUE          
+
+# Disassembled Sun Oct 22 23:14:13 2023
+

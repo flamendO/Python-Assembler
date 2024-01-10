@@ -1,0 +1,65 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "18.py"
+.set name		 "<module>"
+.set stack_size		 3
+.set arg_count		 0
+
+.interned
+	"nombres"
+	"range"
+	"i"
+	"append"
+	"<module>"
+
+.consts
+	1
+	6
+	"Liste de nombres :"
+	None
+
+.names
+	"nombres"
+	"range"
+	"i"
+	"append"
+
+.text
+.line 1
+	BUILD_LIST            0
+	STORE_NAME            0	# "nombres"
+.line 2
+	SETUP_LOOP            label_2
+	LOAD_NAME             1	# "range"
+	LOAD_CONST            0	# 1
+	LOAD_CONST            1	# 6
+	CALL_FUNCTION         2
+	GET_ITER              
+label_0:
+	FOR_ITER              label_1
+	STORE_NAME            2	# "i"
+.line 3
+	LOAD_NAME             0	# "nombres"
+	LOAD_ATTR             3
+	LOAD_NAME             2	# "i"
+	CALL_FUNCTION         1
+	POP_TOP               
+	JUMP_ABSOLUTE         label_0
+label_1:
+	POP_BLOCK             
+.line 4
+label_2:
+	LOAD_CONST            2	# "Liste de nombres :"
+	LOAD_NAME             0	# "nombres"
+	BUILD_TUPLE           2
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	LOAD_CONST            3	# None
+	RETURN_VALUE          
+
+# Disassembled Sun Oct 22 23:14:31 2023
+

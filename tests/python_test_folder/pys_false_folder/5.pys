@@ -1,0 +1,62 @@
+
+
+# Start pyc-objdump output
+
+
+.set flags		 0x00000040
+.set filename		 "5.py"
+.set name		 "<module>"
+.set stack_size		 4
+.set arg_count		 0
+
+.interned
+	"s"
+	"range"
+	"i"
+	"<module>"
+
+.consts
+	0
+	5
+	1
+	"\n"
+	None
+
+.names
+	"s"
+	"range"
+	"i"
+
+.text
+.line 1
+	LOAD_CONST            0	# 0
+	STORE_NAME            0	# "s"
+.line 3
+	SETUP_LOOP            label_2
+	LOAD_NAME             1	# "range"
+	LOAD_CONST            1	# 5
+	CALL_FUNCTION         1
+	GET_ITER              
+label_0:
+	FOR_ITER              label_1
+	STORE_NAME            2	# "i"
+.line 4
+	LOAD_NAME             0	# "s"
+	LOAD_NAME             0	# "s"
+	LOAD_CONST            2	# 1
+	BINARY_ADD            
+	INPLACE_ADD           
+	STORE_NAME            0	# "s"
+	JUMP_ABSOLUTE         label_0
+label_1:
+	POP_BLOCK             
+.line 6
+label_2:
+	LOAD_CONST            3	# "\n"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	LOAD_CONST            4	# None
+	RETURN_VALUE          
+
+# Disassembled Wed Oct 18 15:52:06 2023
+

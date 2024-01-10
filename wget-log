@@ -1,0 +1,11 @@
+--2023-09-27 14:14:24--  https://www.uvolante.org/apt/uvolante.pub.key
+Résolution de www.uvolante.org (www.uvolante.org)… 90.18.198.234
+Connexion à www.uvolante.org (www.uvolante.org)|90.18.198.234|:443… connecté.
+requête HTTP transmise, en attente de la réponse… 200 OK
+Taille : 1688 (1,6K) [application/pgp-keys]
+Sauvegarde en : « STDOUT »
+
+-                                                            0%[                                                                                                                                         ]       0  --.-KB/s               -                                                            0%[                                                                                                                                         ]       0  --.-KB/s    ds 0s      
+
+
+Impossible d’écrire dans « - » (Relais brisé (pipe)).

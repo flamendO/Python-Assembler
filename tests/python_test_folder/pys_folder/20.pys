@@ -1,0 +1,77 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "20.py"
+.set name		 "<module>"
+.set stack_size		 4
+.set arg_count		 0
+
+.interned
+	"nombre"
+	"carre"
+	"est"
+	"n"
+	"resultat"
+	"<module>"
+
+.consts
+.code_start 1
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "20.py"
+.set name		 "carre"
+.set stack_size		 2
+.set arg_count		 1
+
+.consts
+	None
+
+.varnames
+	"nombre"
+
+.text
+.line 2
+	LOAD_FAST             0	# "nombre"
+	LOAD_FAST             0	# "nombre"
+	BINARY_MULTIPLY       
+	RETURN_VALUE          
+.code_end
+	7
+	"Le carré de"
+	"est"
+	None
+
+.names
+	"carre"
+	"n"
+	"resultat"
+
+.text
+.line 1
+	LOAD_CONST            0	# <code:"carre">
+	MAKE_FUNCTION         0
+	STORE_NAME            0	# "carre"
+.line 4
+	LOAD_CONST            1	# 7
+	STORE_NAME            1	# "n"
+.line 5
+	LOAD_NAME             0	# "carre"
+	LOAD_NAME             1	# "n"
+	CALL_FUNCTION         1
+	STORE_NAME            2	# "resultat"
+.line 6
+	LOAD_CONST            2	# "Le carré de"
+	LOAD_NAME             1	# "n"
+	LOAD_CONST            3	# "est"
+	LOAD_NAME             2	# "resultat"
+	BUILD_TUPLE           4
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	LOAD_CONST            4	# None
+	RETURN_VALUE          
+
+# Disassembled Sun Oct 22 23:14:43 2023
+

@@ -1,0 +1,62 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "10.py"
+.set name		 "<module>"
+.set stack_size		 5
+.set arg_count		 0
+
+.interned
+	"scores"
+	"sum"
+	"len"
+	"average"
+	"<module>"
+
+.consts
+	85
+	92
+	78
+	90
+	89
+	"La moyenne des scores est"
+	None
+
+.names
+	"scores"
+	"sum"
+	"len"
+	"average"
+
+.text
+.line 1
+	LOAD_CONST            0	# 85
+	LOAD_CONST            1	# 92
+	LOAD_CONST            2	# 78
+	LOAD_CONST            3	# 90
+	LOAD_CONST            4	# 89
+	BUILD_LIST            5
+	STORE_NAME            0	# "scores"
+.line 2
+	LOAD_NAME             1	# "sum"
+	LOAD_NAME             0	# "scores"
+	CALL_FUNCTION         1
+	LOAD_NAME             2	# "len"
+	LOAD_NAME             0	# "scores"
+	CALL_FUNCTION         1
+	BINARY_DIVIDE         
+	STORE_NAME            3	# "average"
+.line 3
+	LOAD_CONST            5	# "La moyenne des scores est"
+	LOAD_NAME             3	# "average"
+	BUILD_TUPLE           2
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	LOAD_CONST            6	# None
+	RETURN_VALUE          
+
+# Disassembled Sun Oct 22 23:13:40 2023
+

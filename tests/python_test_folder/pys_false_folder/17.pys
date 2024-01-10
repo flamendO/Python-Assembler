@@ -1,0 +1,70 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "17.py"
+.set name		 "<module>"
+.set stack_size		 4
+.set arg_count		 0
+
+.interned
+	":"
+	"limite"
+	"range"
+	"n"
+	"nombres_pairs"
+	"<module>"
+
+.consts
+	20
+	2
+	0
+	"Nombres pairs inférieurs à"
+	":"
+	None
+
+.names
+	"limite"
+	"range"
+	"n"
+	"nombres_pairs"
+
+.text
+.line 1
+	LOAD_CONST            0	# 20
+	STORE_NAME            0	# "limite"
+.line 2
+	BUILD_LIST            0
+	LOAD_NAME             1	# "range"
+	LOAD_NAME             0	# "limite"
+	CALL_FUNCTION         1
+	GET_ITER              
+label_0:
+	FOR_ITER              label_1
+	STORE_NAME            2	# "n"
+	LOAD_NAME             2	# "n"
+	LOAD_CONST            1	# 2
+	BINARY_MODULO         
+	LOAD_CONST            2	# 0
+	COMPARE_OP            2	# "=="
+	POP_JUMP_IF_FALSE     label_0
+	LOAD_NAME             2	# "n"
+	LIST_APPEND           2
+	JUMP_ABSOLUTE         label_0
+label_1:
+	STORE_NAME            3	# "nombres_pairs"
+.line 3
+	LOAD_CONST            3	# "Nombres pairs inférieurs à"
+	LOAD_NAME             0	# "limite"
+	LOAD_CONST            4	# ":"
+	LOAD_NAME             3	# "nombres_pairs"
+	BUILD_TUPLE           4
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	LOAD_CONST            5	# None
+	RETURN_VALUE          
+
+# Disassembled Sun Oct 22 23:14:24 2023
+

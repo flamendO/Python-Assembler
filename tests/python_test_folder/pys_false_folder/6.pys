@@ -1,0 +1,68 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set filename		 "6.py"
+.set name		 "<module>"
+.set stack_size		 3
+.set arg_count		 0
+
+.interned
+	"s"
+	"i"
+	"str"
+	"<module>"
+
+.consts
+	5
+	1
+	"Factorielle de 5 = "
+	None
+
+.names
+	"s"
+	"i"
+	"str"
+
+.text
+.line 1
+	LOAD_CONST            0	# 5
+	STORE_NAME            0	# "s"
+.line 2
+	LOAD_CONST            1	# 1
+	STORE_NAME            1	# "i"
+.line 3
+	SETUP_LOOP            label_2
+label_0:
+	LOAD_NAME             1	# "i"
+	LOAD_CONST            0	# 5
+	COMPARE_OP            3	# "!="
+	POP_JUMP_IF_FALSE     label_1
+.line 4
+	LOAD_NAME             0	# "s"
+	LOAD_NAME             1	# "i"
+	BINARY_MULTIPLY       
+	STORE_NAME            0	# "s"
+.line 5
+	LOAD_NAME             1	# "i"
+	LOAD_CONST            1	# 1
+	BINARY_ADD            
+	STORE_NAME            1	# "i"
+	JUMP_ABSOLUTE         label_0
+label_1:
+	POP_BLOCK             
+.line 6
+label_2:
+	LOAD_CONST            2	# "Factorielle de 5 = "
+	LOAD_NAME             2	# "str"
+	LOAD_NAME             0	# "s"
+	CALL_FUNCTION         1
+	BINARY_ADD            
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	LOAD_CONST            3	# None
+	RETURN_VALUE          
+
+# Disassembled Mon Oct 16 15:33:48 2023
+

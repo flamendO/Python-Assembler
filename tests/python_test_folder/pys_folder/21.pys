@@ -1,0 +1,43 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "21.py"
+.set name		 "<module>"
+.set stack_size		 2
+.set arg_count		 0
+
+.interned
+	"a"
+	"b"
+	"<module>"
+
+.consts
+	5
+	2
+	None
+
+.names
+	"a"
+	"b"
+
+.text
+.line 1
+	LOAD_CONST            0	# 5
+	STORE_NAME            0	# "a"
+.line 2
+	LOAD_CONST            1	# 2
+	STORE_NAME            1	# "b"
+.line 4
+	LOAD_NAME             0	# "a"
+	LOAD_NAME             1	# "b"
+	BUILD_TUPLE           2
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	LOAD_CONST            2	# None
+	RETURN_VALUE          
+
+# Disassembled Tue Oct 24 09:59:24 2023
+
