@@ -1,5 +1,5 @@
 # Python Assembler
-
+**authors : ** @aulympe @flamendO
 ## Information
 
 The purpose of this project was to create a python assembler in **C language**. We had produced 3/4 deliverables, with test functions. 
